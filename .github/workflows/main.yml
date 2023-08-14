@@ -2,9 +2,9 @@
 
   on:
     push:
-      branches: [ master, setup_ci ]
+      branches: [ master ]
     pull_request:
-      branches: [ master, setup_ci ]
+      branches: [ master ]
 
   jobs:
     build:
@@ -26,9 +26,3 @@
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-      - name: Test echo
-        run: |
-          echo "hi" 
-      - name: Test python -h
-        run: |
-          python3 -h
