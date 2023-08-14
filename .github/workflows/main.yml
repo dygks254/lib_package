@@ -1,16 +1,16 @@
   name: Python application
-	
+
   on:
     push:
       branches: [ master, setup_ci ]
     pull_request:
       branches: [ master, setup_ci ]
-	
+
   jobs:
     build:
-	
+
       runs-on: ubuntu-latest
-	
+
       steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.7
