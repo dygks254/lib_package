@@ -2,9 +2,9 @@
 	
   on:
     push:
-      branches: [ setup_ci ]
+      branches: [ master, setup_ci ]
     pull_request:
-      branches: [ setup_ci ]
+      branches: [ master, setup_ci ]
 	
   jobs:
     build:
