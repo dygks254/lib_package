@@ -12,7 +12,7 @@ def validPathType(pathCheck: str) -> pathlib.Path:
   except ValueError:
       raise argparse.ArgumentTypeError(f"This directory ({pathCheck}) not valid! ")
     
-def validPathType(fileCheck : str) -> pathlib.Path:
+def validFileType(fileCheck : str) -> pathlib.Path:
   """Custom argparse type for real file"""
   try:
     if os.path.isfile(fileCheck) is False:
