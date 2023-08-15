@@ -24,7 +24,7 @@
           pip install flake8 pytest
       - name: Lint with flake8
         run: |
-          if [ `flake8 . --count --select=E --show-source --max-line-length=200 --statistics --ignore=E402` -eq 0 ]; then echo "Passed";else; exit 1; fi
+          if [ `flake8 --count` -eq 0 ]; then echo "Passed";else; exit 1; fi
       - name: Run all Unittests
         run: |
           python3 unitTest_scripts/unitTest.py
